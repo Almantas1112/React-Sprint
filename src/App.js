@@ -26,8 +26,8 @@ function App() {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    if(todo.length < 5) {
-      setError("At least 5 letters in word required!")
+    if(todo.length < 2) {
+      setError("At least 2 letters in word required!")
       return false;
     }
 
@@ -49,7 +49,6 @@ function App() {
 
     setTodos(duplicateTodos);
 
-    console.log(todos)
   }
 
   const delHandler = (todoId) => {
