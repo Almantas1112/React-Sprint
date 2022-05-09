@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Form from "./components/Form";
+import Header from "./components/Header";
+import Layout from "./components/Layout";
+import Lists from "./components/Lists";
 
 function App() {
+  const [todo, setTodo] = useState('');
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log("submit");
+  }
+
+  const doneHandler = () => {
+    console.log("done");
+  }
+
+  const delHandler = () => {
+    console.log("delete");
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Header/>
+      <Form 
+        todo={todo}
+        change={(e) => setTodo(e.target.value)}
+        submit={submitHandler}
+      />
+      <Lists 
+        done={doneHandler} 
+        del={delHandler} 
+      />
+    </Layout>
   );
 }
 
