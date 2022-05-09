@@ -1,11 +1,13 @@
 import React from 'react'
 import ListItem from './ListItem'
 
-const Lists = ({done, del}) => {
+const Lists = ({done, del, todos}) => {
   return (
     <div className='listWrap'>
         <ul className='list-group'>
-            <ListItem title="Title 1" delHandler={del} doneHandler={done}/>
+            {todos.map((todo) => (
+            <ListItem key={todo.id} title={todo.title} delHandler={del} doneHandler={done}/>
+            ))}
         </ul>
     </div>
   )

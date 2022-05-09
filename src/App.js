@@ -6,10 +6,14 @@ import Lists from "./components/Lists";
 
 function App() {
   const [todo, setTodo] = useState('');
+  const [todos, setTodos] = useState([]);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log("submit");
+
+    setTodos([{ id: Date.now(), title: todo, done: false}, ...todos])
+
+    console.log(todos);
   }
 
   const doneHandler = () => {
@@ -30,7 +34,8 @@ function App() {
       />
       <Lists 
         done={doneHandler} 
-        del={delHandler} 
+        del={delHandler}
+        todos={todos} 
       />
     </Layout>
   );
