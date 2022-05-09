@@ -11,17 +11,23 @@ function App() {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    setTodos([{ id: Date.now(), title: todo, done: false}, ...todos])
+    setTodos([{ id: Date.now(), title: todo, done: false}, ...todos]);
 
     console.log(todos);
   }
 
   const doneHandler = () => {
+
+
     console.log("done");
   }
 
-  const delHandler = () => {
-    console.log("delete");
+  const delHandler = (todoId) => {
+    if(window.confirm('Are you sure?')) {
+      const updatedTodos = todos.filter(item => item.id !== todoId);
+
+      setTodos(updatedTodos);
+    }
   }
 
   return (
