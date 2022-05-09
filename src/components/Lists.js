@@ -12,6 +12,7 @@ const Lists = ({done, del, todos}) => {
                 title={todo.title} 
                 delHandler={del} 
                 doneHandler={done}
+                done={todo.done}
             />
             ))}
         </ul>

@@ -16,10 +16,19 @@ function App() {
     console.log(todos);
   }
 
-  const doneHandler = () => {
+  const doneHandler = (todoId) => {
+    const index = todos.findIndex(item => item.id === todoId);
+    const duplicateTodos = [...todos];
 
+    duplicateTodos[index] = {
+      id: todos[index].id,
+      title: todos[index].title,
+      done: !todos[index].done,
+    }
 
-    console.log("done");
+    setTodos(duplicateTodos);
+
+    console.log(todos)
   }
 
   const delHandler = (todoId) => {
