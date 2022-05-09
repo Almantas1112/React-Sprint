@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Form from "./components/Form";
 import Header from "./components/Header";
 import Layout from "./components/Layout";
@@ -8,6 +8,20 @@ function App() {
   const [error, setError] = useState(null);
   const [todo, setTodo] = useState('');
   const [todos, setTodos] = useState([]);
+
+  //Getting from local storage
+  useEffect(() => {
+    const getTodos = JSON.parse(localStorage.getItem('todos' ))
+
+    if(getTodos) {
+      setTodos(getTodos)
+    }
+  }, [])
+
+  //Saving to local storage
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
 
   const submitHandler = (e) => {
     e.preventDefault();
