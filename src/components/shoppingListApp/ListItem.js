@@ -10,6 +10,7 @@ const ListItem = ({id, title, delHandler, doneHandler, done}) => {
                     {done ?
                      (<i className='fas fa-undo-alt'></i>) : (<i className='fas fa-check'></i>)}
                     </button>
+                <button className='btn btn-sm btn-warning mr-2'><i className="fa-solid fa-pen"></i></button>
             </div>
     </li>
   )

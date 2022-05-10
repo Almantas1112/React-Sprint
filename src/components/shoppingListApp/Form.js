@@ -5,7 +5,7 @@ const Form = ({todo, change, submit, error}) => {
     <form onSubmit={submit}>
         <div className='form-group row'>
             <div className='col-9'>
-                <input type="text" className='form-control-plaintext' value={todo} onChange={change}/>
+                <input type="text" className='form-control-plaintext text-center bg-light' value={todo} onChange={change}/>
                 {error && <small className='form-text text-danger'>{error}</small>}
             </div>
 
