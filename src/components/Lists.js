@@ -1,7 +1,7 @@
 import React from 'react'
 import ListItem from './ListItem'
 
-const Lists = ({done, del, todos}) => {
+const Lists = ({delAll, done, del, todos}) => {
 
     if (todos.length <= 0) {
         return (
@@ -15,6 +15,7 @@ const Lists = ({done, del, todos}) => {
   return (
     <div className='listWrap'>
         <ul className='list-group'>
+        <button className='btn btn-sm btn-danger mr-2' onClick={delAll}>Delete all</button>
             {todos && 
             todos.map((todo) => (
             <ListItem 

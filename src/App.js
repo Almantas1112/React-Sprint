@@ -48,7 +48,6 @@ function App() {
     }
 
     setTodos(duplicateTodos);
-
   }
 
   const delHandler = (todoId) => {
@@ -58,6 +57,13 @@ function App() {
       setTodos(updatedTodos);
     }
   }
+
+  const deleteAll = () => {
+    if(window.confirm('Are you sure?')) {
+
+      setTodos([]);
+    }
+}
 
   return (
     <Layout>
@@ -71,7 +77,8 @@ function App() {
       <Lists 
         done={doneHandler} 
         del={delHandler}
-        todos={todos} 
+        todos={todos}
+        delAll={deleteAll} 
       />
     </Layout>
   );
