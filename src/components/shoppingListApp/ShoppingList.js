@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Form from "./Form";
 import HeaderOfApp from "./HeaderOfApp";
 import Layout from "./Layout";
@@ -9,6 +8,7 @@ function ShoppingList() {
   const [error, setError] = useState(null);
   const [todo, setTodo] = useState('');
   const [todos, setTodos] = useState([]);
+  const [reload, setReload] = useState(false);
 
   //Getting from local storage
   useEffect(() => {
@@ -66,6 +66,14 @@ function ShoppingList() {
     }
 }
 
+  const update = (todoId) => {
+    const newName = prompt("New name?");
+    const updateName = todos.filter(item => item.id === todoId)[0].title;
+    const checker = JSON.stringify(todos).replace(updateName, newName);
+    const updating = JSON.parse(checker);
+    setTodos(updating);
+  }
+
   return (
     <Layout>
       <HeaderOfApp/>
@@ -79,7 +87,8 @@ function ShoppingList() {
         done={doneHandler} 
         del={delHandler}
         todos={todos}
-        delAll={deleteAll} 
+        delAll={deleteAll}
+        update={update}
       />
     </Layout>
   );

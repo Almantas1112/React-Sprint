@@ -1,12 +1,12 @@
 import React from 'react'
 import ListItem from './ListItem'
 
-const Lists = ({delAll, done, del, todos}) => {
+const Lists = ({update, delAll, done, del, todos}) => {
 
     if (todos.length <= 0) {
         return (
             <div className='jumbotron text-center'>
-                <h1 className='text-danger'>Nothing added yet!</h1>
+                <h1 className='text-danger'>EMPTY CART!</h1>
                 <h4>Add something!</h4>
             </div>
         )
@@ -25,6 +25,7 @@ const Lists = ({delAll, done, del, todos}) => {
                 delHandler={del} 
                 doneHandler={done}
                 done={todo.done}
+                update={update}
             />
             ))}
         </ul>
