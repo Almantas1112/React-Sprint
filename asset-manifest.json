@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/React-Sprint/static/css/main.0ca5adcc.css",
+    "main.js": "/React-Sprint/static/js/main.53d09d49.js",
+    "static/media/ThisIsFine.gif": "/React-Sprint/static/media/ThisIsFine.e929cce6e3daa3bece8d.gif",
+    "index.html": "/React-Sprint/index.html",
+    "main.0ca5adcc.css.map": "/React-Sprint/static/css/main.0ca5adcc.css.map",
+    "main.53d09d49.js.map": "/React-Sprint/static/js/main.53d09d49.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ca5adcc.css",
+    "static/js/main.53d09d49.js"
+  ]
+}
