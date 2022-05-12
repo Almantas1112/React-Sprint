@@ -9,6 +9,7 @@ const Header = () => {
     <Link className='navbar-brand' to="/"><i className="fa-brands fa-reacteurope" /></Link>
     <Nav className="me-auto">
       <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="/ShoppingListApp">ShoppingApp</NavLink>
+      <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="/Counter">Counter</NavLink>
     </Nav>
     </Container>
   </nav>

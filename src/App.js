@@ -1,4 +1,5 @@
 import ShoppingList from "./components/shoppingListApp/ShoppingList";
+import Counter from "./components/counter/CounterApp";
 import Header from "./components/homePage/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./components/ThisIsFine.gif"
@@ -9,6 +10,7 @@ function App() {
     <Header />
     <Routes>
       <Route path='/ShoppingListApp' element={<ShoppingList />} />
+      <Route path='/Counter' element={<Counter />} />
       <Route index element={<ShoppingList />} />
       <Route path="*"
                     element={
