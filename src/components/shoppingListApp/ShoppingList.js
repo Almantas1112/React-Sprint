@@ -8,7 +8,6 @@ function ShoppingList() {
   const [error, setError] = useState(null);
   const [todo, setTodo] = useState('');
   const [todos, setTodos] = useState([]);
-  const [reload, setReload] = useState(false);
 
   //Getting from local storage
   useEffect(() => {
@@ -29,6 +28,9 @@ function ShoppingList() {
 
     if(todo.length < 2) {
       setError("At least 2 letters in word required!")
+      return false;
+    } else if (todo.length > 15) {
+      setError("Max letters 15!")
       return false;
     }
 

@@ -14,7 +14,7 @@ function App() {
                     element={
                         <main style={{ marginTop: "5rem", textAlign: "center", color: "white"}}>
                           <h1>ERROR 404! Page not found!</h1>
-                            <img src={NotFound} alt="Not found picture" />
+                            <img style={{maxWidth: "320px"}} src={NotFound} alt="Not found" />
                         </main>
                     }
                 />
