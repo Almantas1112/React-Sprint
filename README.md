@@ -12,7 +12,7 @@ NOTE! - Page shows 404 page not found (page is working normally just have small 
 ## Launching procedure
 
 1. First of all you have to clone repository, use command "git clone https://github.com/Almantas1112/React-Sprint.git" in VS code terminal.
-2. Next step is to use this command - "git install" in VS code terminal.
+2. Next step is to use this command - "npm install" in VS code terminal.
 3. Use command in terminal "npm start".
 4. Page should be up and running!
 
