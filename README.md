@@ -7,7 +7,6 @@ This is a simple website which contains shopping list app (To-Do app) and calcul
 Page is created using React, Bootstrap.
 
 This page is live via Github Pages - https://almantas1112.github.io/React-Sprint/<br/>
-NOTE! - Page shows 404 page not found (page is working normally just have small bug).
 
 ## Launching procedure
 
