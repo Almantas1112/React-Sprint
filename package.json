@@ -2,7 +2,7 @@
   "name": "react-sprint",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://almantas1112.github.io/React-Sprint/",
+  "homepage": "",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",

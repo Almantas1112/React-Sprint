@@ -9,8 +9,8 @@ function App() {
     <BrowserRouter>
     <Header />
     <Routes>
-      <Route path='/ShoppingListApp' element={<ShoppingList />} />
-      <Route path='/Counter' element={<Counter />} />
+      <Route path='/shoppingListApp' element={<ShoppingList />} />
+      <Route path='/counter' element={<Counter />} />
       <Route index element={<ShoppingList />} />
       <Route path="*"
                     element={
